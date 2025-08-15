@@ -62,6 +62,47 @@
         android:padding="12dp"
         android:background="@android:drawable/edit_text" />
 
+    <!-- Confirm Password Input Field -->
+    <EditText
+        android:id="@+id/confirm_password_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Confirm Password"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@id/password_input"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:padding="12dp"
+        android:background="@android:drawable/edit_text" />
+
+    <!-- Send OTP Button -->
+    <Button
+        android:id="@+id/send_otp_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Send OTP"
+        android:backgroundTint="#6200EE"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/confirm_password_input"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- OTP Input Field -->
+    <EditText
+        android:id="@+id/otp_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter OTP"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/send_otp_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:padding="12dp"
+        android:background="@android:drawable/edit_text" />
+
     <!-- Register Button -->
     <Button
         android:id="@+id/register_button"
@@ -70,7 +111,7 @@
         android:text="Register"
         android:backgroundTint="#6200EE"
         android:textColor="#FFFFFF"
-        app:layout_constraintTop_toBottomOf="@id/password_input"
+        app:layout_constraintTop_toBottomOf="@id/otp_input"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="24dp" />

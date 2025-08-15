@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.google.gms.plugin) // Google Services plugin
 }
 
 android {
@@ -39,7 +40,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -49,6 +49,14 @@ dependencies {
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.androidx.activity)
+
+    // Firebase dependencies
+    implementation(platform(libs.firebase.bom)) // Firebase BOM
+    implementation(libs.firebase.auth.ktx) // Firebase Auth KTX
+    implementation(libs.firebase.firestore.ktx) // Added Firestore KTX
+    implementation(libs.firebase.messaging.ktx) // Added Messaging KTX for FCM
+    implementation(libs.firebase.dynamic.links.ktx) // Added for invite links (Stage 2)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
